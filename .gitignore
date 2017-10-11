@@ -6,6 +6,10 @@
 /Assets/AssetStoreTools*
 /.idea/
 
+# Plugins
+/Assets/Plugins/Zenject/Documentation/
+/Assets/Plugins/Zenject/OptionalExtras/
+
 # Visual Studio 2015 cache directory
 /.vs/
 
