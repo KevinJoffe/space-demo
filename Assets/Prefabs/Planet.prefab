@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33167631087783726}
   - component: {fileID: 135109188371165034}
   - component: {fileID: 23372130855063780}
+  - component: {fileID: 114326536889039870}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -81,6 +82,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226159707423718}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114326536889039870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1226159707423718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25732012cad4e3aa59a8cf2f78581b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135109188371165034
 SphereCollider:
   m_ObjectHideFlags: 1
