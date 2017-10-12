@@ -2,33 +2,36 @@
 using UnityEngine;
 using Zenject;
 
-public class PlanetSpawner : ITickable
+public class PlanetSpawner : IInitializable
 {
     readonly Planet.Factory _planetFactory;
     readonly Sun.Factory _sunFactory;
-    private List<Planet> planets;
-    private Sun sun;
+    private readonly List<Planet> _planets;
+    private Sun _sun;
+
+    private readonly int _numPlanets = 20;
 
     public PlanetSpawner(Planet.Factory planetFactory, Sun.Factory sunFactory)
     {
-        Debug.Log("PlanetSpawnerConstructor");
         _planetFactory = planetFactory;
         _sunFactory = sunFactory;
-        planets = new List<Planet>();
+        _planets = new List<Planet>();
     }
 
-    public void Tick()
+    public void Initialize()
     {
-        Debug.Log("Tick");
-
-        if (planets.Count == 0)
+        Debug.Log("PlanetSpawnerInit");
+        for (int i = 0; i < 20; i++)
         {
-            sun = _sunFactory.Create();
-            planets.Add(_planetFactory.Create(sun.transform.position));
-        }
-        else if (planets.Count < 100)
-        {
-            planets.Add(_planetFactory.Create(sun.transform.position));
+            if (i == 0)
+            {
+                _sun = _sunFactory.Create();
+                _planets.Add(_planetFactory.Create(_sun.transform.position));
+            }
+            else
+            {
+                _planets.Add(_planetFactory.Create(_sun.transform.position));
+            }
         }
     }
 }

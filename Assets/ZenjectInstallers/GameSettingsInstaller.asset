@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19c7141b84fb4e9690b79897500a997, type: 3}
   m_Name: GameSettingsInstaller
   m_EditorClassIdentifier: 
-  IocInstallerSettings:
+  GameInstallerSettings:
     SunPrefab: {fileID: 1453101736253100, guid: 9ab5698bc0129354a8a89c4fe419fda4,
       type: 2}
     PlanetPrefab: {fileID: 1226159707423718, guid: 8afece34f8d6f22439dc2f03539b372f,

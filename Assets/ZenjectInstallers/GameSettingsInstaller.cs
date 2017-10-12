@@ -1,13 +1,16 @@
 using UnityEngine;
 using Zenject;
 
-[CreateAssetMenu(fileName = "GameSettingsInstaller", menuName = "ZenjectInstallers/GameSettingsInstaller")]
-public class GameSettingsInstaller : ScriptableObjectInstaller<GameSettingsInstaller>
+namespace ZenjectInstallers
 {
-    public GameInstaller.Settings IocInstallerSettings;
-
-    public override void InstallBindings()
+    [CreateAssetMenu(fileName = "GameSettingsInstaller", menuName = "ZenjectInstallers/GameSettingsInstaller")]
+    public class GameSettingsInstaller : ScriptableObjectInstaller<GameSettingsInstaller>
     {
-        Container.BindInstance(IocInstallerSettings);
+        public GameInstaller.Settings GameInstallerSettings;
+
+        public override void InstallBindings()
+        {
+            Container.BindInstance(GameInstallerSettings);
+        }
     }
 }
